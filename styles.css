@@ -1,57 +1,92 @@
-/* styles.css */
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-body {
-    background-color: black;
+.bgimg {
+  background-image: url('assets/test.jpeg');
+  height: 100%;
+  background-position: 50% 80%;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}  
+
+.topleft {
+  position: absolute;
+  top: 0px;
+  left: 16px;
+}
+
+.topleft img {
+  width: 100%
+}
+
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+
+@media only screen and (max-width: 779px) {
+  .bgimg {
+    background-image: url('assets/test.jpeg');
+    height: 100%;
+    background-position: 50% 80%;    
+    background-size: cover;
+    position: relative;
     color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+  }  
+  .topleft img {
+    width: 75%
+  }
 }
 
-header {
-    text-align: center;
-    animation: slideInLeft 1s ease-out;
-    font-size: 24px;
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-section {
-    max-width: 600px;
-    margin: 20px auto;
-    animation: slideInRight 1s ease-out 0.5s forwards;
-    opacity: 0;
-    text-align: center;
-    font-size: 18px;
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.centered-image {
-    margin-top: 20px;
-}
-
-.centered-image img {
-    max-width: 20%; /* Set the image size to 20% of its container */
-    height: auto;
-}
-
-a {
+@media only screen and (min-width: 780px) {
+  .bgimg {
+    background-image: url('assets/test.jpeg');    
+    height: 100%;
+    background-position: 50% 80%;    
+    background-size: cover;
+    position: relative;
     color: white;
-    text-decoration: underline;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+  }  
+  .topleft img {
+    width: 100%
+  }
+  
 }
+
+
+
+/* Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {}
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {}
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {}
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {}
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {}
