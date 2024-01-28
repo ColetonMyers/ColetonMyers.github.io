@@ -45,6 +45,7 @@ hr {
 }
 
 
+
 @media only screen and (max-width: 779px) {
   .bgimg {
     background-image: url('assets/test.jpeg');
